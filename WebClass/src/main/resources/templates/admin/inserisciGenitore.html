@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html
+xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="https://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>Form Docente</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<h1 class="text-center">WebClass Application</h1>
+<hr>
+<h2 class="text-center">Registra Genitore</h2>
+
+<div>
+		<form action="#" th:action="@{/saveGenitore/{idc}/{ids} (idc=${classe.id},ids=${idfiglio})}" th:object="${genitoredto}"
+			method="post">
+			
+			<h3 class="text-center">Dati Genitore</h3>
+			<label for="nome" class="col-sm-2 col-form-label">Nome</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="text" th:field="*{nome}"><br>
+			</div>
+			
+			<label for="nome" class="col-sm-2 col-form-label">Cognome</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="text" th:field="*{cognome}"><br>
+			</div>
+			
+			
+			<label for="nome" class="col-sm-2 col-form-label">Telefono</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="text" th:field="*{riferimento}"><br>
+			</div>
+		
+			
+				<h3 class="text-center">Dati Account</h3>
+			<label for="nome" class="col-sm-2 col-form-label">Username</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="text" th:field="*{username}"><br>
+			</div>
+			
+			<label for="nome" class="col-sm-2 col-form-label">Password</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="password" th:field="*{password}"><br>
+			</div>
+			
+			<label for="nome" class="col-sm-2 col-form-label">Email</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="text"  th:field="*{email}"><br>
+			</div>
+			
+			
+			<button type="submit" class="btn btn-primary" >Registra</button>
+		</form>
+</div>
+</div>
+</body>
+</html>

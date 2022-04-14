@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html
+xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="https://www.thymeleaf.org" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>WebClass Application</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<h1 class="text-center">WebClass Application</h1>
+<hr>
+<h2 class="text-center">Inserisci Nuovo Compito </h2>
+
+<div>
+		<form action="#" th:action="@{/saveCompito}" th:object="${compito}"
+			method="post">
+			
+			<input class="form-control" type="hidden" th:field="*{id}">
+			
+			<h3 class="text-center">Dettagli Compito</h3>
+			<label for="nome" class="col-sm-2 col-form-label">Data</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="text" th:field="*{data}"><br>
+			</div>
+			
+			<label for="nome" class="col-sm-2 col-form-label">Descrizione</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="text" th:field="*{descrizione}"><br>
+			</div>
+			
+			<label for="nome" class="col-sm-2 col-form-label">Data Consegna</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="nome" type="text" th:field="*{dataconsegna}"><br>
+			</div>
+			
+			<button type="submit" class="btn btn-primary" >Inserisci</button>
+		</form>
+</div>
+</div>
+</body>
+</html>
